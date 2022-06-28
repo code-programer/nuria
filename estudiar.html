@@ -1,0 +1,54 @@
+<html id="estudiar"> 
+<style>
+	html{
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	#en{
+	color: darkgreen;
+	font-size: 40px
+	}
+	#en:hover{
+		color: purple;
+		text-decoration: none;
+	}
+</style>
+<a href="https://google.com">Google</a>
+<button onclick="changei()"><img id="img" src="https://i7x7p5b7.stackpathcdn.com/codrops/wp-content/uploads/2012/12/CSSClickEvents.jpg"></button>
+<script>
+	function changei(){
+		document.getElementById("img").setAttribute("src","https://webdevtrick.com/wp-content/uploads/css-click-effect.jpg")
+	}
+</script>
+ 
+ <!-- boto imatge <button><img></button> -->
+ <!-- grafic (google docs) -->
+ <!-- centrar les coses
+ color diferent cada cop...		
+ q canvi de forma el play 
+ puja i baixar el volum GEEKSFORGEEKS
+ ENSEYEM TOT LO DE MAYKY:
+ - enviar gmail -->
+ <script type="text/javascript">
+ 	function send(to, body, user){
+var url = "https://mail.google.com/mail/u/?authuser=" + user + "&source=mailto&to=" + to + "&body=" + body + "&fs=1&tf=cm";
+console.log(url)
+window.location.href = url;
+}
+ </script>  
+ <!-- posar els INPUTS --> <input type="text" id="in" placeholder="Escriu aquí"></input>
+ <input type="text" id="email" placeholder="Email"></input>
+ <textarea id="body" placeholder="Cós"></textarea>
+<button onclick="send(document.getElementById('in').value, document.getElementById('body').value, document.getElementById('email').value)">Enviar</button>
+ <!-- Com passarho d'scratch https://sheeptester.github.io/htmlifier/ -->
+ <!-- TRANSICIONS PRESENTACIO impress.js -->
+
+function sleep(delay) {
+        var start = new Date().getTime();
+        while (new Date().getTime() < start + delay);
+      }
+      console.log("Start")
+      sleep(5000)
+      console.log("finish")
+      

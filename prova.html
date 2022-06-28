@@ -1,0 +1,64 @@
+<html id="go">
+<script>
+	function press(){
+			if (pressed == gat){
+				alert("Tocat!")
+			}
+			else{
+				alert("No!")
+			}
+		}
+		function sleep(delay) {
+        	var start = new Date().getTime();
+        	while (new Date().getTime() < start + delay);
+      	}
+      	function showgat(){
+			var tata = gat;
+			document.getElementById(tata).innerHTML = "<img src='foratgat.png'>"
+			sleep(2000)
+			document.getElementById(tata).innerHTML = "<img src='img.png>'"
+		}
+	function change(html) {
+			document.getElementById("b").innerHTML = html;
+
+	}
+	function dod() {
+		change('<p style="color: #FB4D46;font-size: 75px;font-family: "Smooch", cursive;">Caça el gat</p><style>html{background-color:#FFAE42;display:flex;align-items:center;flex-direction:column;}</style><button id="1" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><button id="2" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><button id="3" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><br><button id="4" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><button id="5" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><button id="6" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ></button><br><button id="7" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ><img style="height: 100px; width: 100px;" id="img" src="img.png"></button><button id="8" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ><img style="height: 100px; width: 100px;" id="img" src="img.png"></button><button id="9" style="background-color: #FFAE42; border: none; width: 100px;height: 100px;" ><img style="height: 100px; width: 100px;" id="img" src="img.png"></button>')
+		
+	}
+
+</script>
+<style>
+	html{
+		display:flex;
+		align-items:center;
+		flex-direction:column;
+		background-color: #3F0BA0;
+	}
+	p{
+		color: #DCD1F1;
+		font-size: 75px;
+		font-family: 'Smooch', cursive;
+	}
+	button{
+		background-color: #DCD1F1;
+		color: #3F0BA0;
+		width: 200px;
+		height: 75px;
+		border-radius: 20px;
+		font-size: 40px;
+		font-family:'Smooch', cursive;
+		align-items:center;
+	}
+	#c:active{
+		color: #4666FF;
+	}
+</style>
+<body id="b">
+<p>Atrapa el gat</p>
+<img src="https://i.pinimg.com/originals/46/37/63/4637632aa50dec67576174f269915e11.png">
+<br>
+<br>
+<button id="c" onclick="dod()">Comença</button> 
+</body>
+</html>

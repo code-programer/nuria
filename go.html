@@ -1,0 +1,90 @@
+<html>
+<div scroll="true" id="screen"></div>
+<br><br>
+<input id="in" onfocusout="got()" placeholder="Busca">
+<script>
+	function write(html) {
+  var newDiv = document.createElement("div");
+  newDiv.innerHTML = html;
+  var currentDiv = document.getElementById("screen");
+  currentDiv.appendChild(newDiv);
+}
+	function got(){
+        var v = document.getElementById("in").value;
+        search(v)
+    }
+    function advance(event) {
+  if (event instanceof MouseEvent) {
+    console.log('clicked');
+  } else if (event instanceof KeyboardEvent && event.keyCode === 13) {
+    got()  
+}
+}
+window.addEventListener('keypress', advance);
+	//
+	//
+	//base
+	var base = {}
+	base.intro = "L'input o salt de paràgraf es fa servir així.<br>$1br$2$1br$2Per exemple: Aixó$1br$2$1br$2està$1br$2$1br$2separat.$1br$2$1br$2" ,
+	base.paragraf = "Un paràgraf es fa servir amb l'objecte <p>Contingut</p>. $1br$2$1br$2Per exemple:$1br$2$1p$2Aixó és un paràgraf$1/p$2"
+	base.p = "Un paràgraf es fa servir amb l'objecte <p>Contingut</p>. $1br$2$1br$2Per exemple:$1br$2$1p$2Aixó és un paràgraf$1/p$2"
+	base.br = "L'input o salt de paràgraf es fa servir així.<br>$1br$2$1br$2Per exemple: Aixó$1br$2$1br$2està$1br$2$1br$2separat.$1br$2$1br$2" ,
+	//
+	//
+	/*function*/
+	localStorage.scroll	= 1;
+	q = new URLSearchParams(window.location.search).get('q');
+	search(q)
+	function search(query){
+	var ta = base[query].replaceAll("<","&lt").replaceAll(">","&gt").replaceAll("à", "&agrave").replaceAll("ò", "&ograve").replaceAll("è", "&egrave").replaceAll("é", "&eacute").replaceAll("ó", "&oacute").replaceAll("í", "&iacute").replaceAll("ú", "&uacute").replaceAll("$1","<").replaceAll("$2",">")
+	write(ta + "<br><br><br>")
+	document.getElementById("in").value = ""
+	document.getElementById("in").focus()	
+	var scroll = localStorage.scroll + 1;
+	document.getElementById("screen").scrollTo(0,9000 * scroll)
+	localStorage.scroll = scroll;
+}
+</script>
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;800&display=swap');
+	#screen{
+		overflow-y: scroll;
+		height: 365px;
+		max-height: 356px;
+		font-family: 'Stick No Bills', sans-serif;
+		font-size: 30px;
+		color: #A26769;
+	}
+	body{
+		background-color: ghostwhite;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+	}
+	#in{
+		all: unset;
+		background-color: #D5B9B2;
+		width: 300px;
+		height: 50px;
+		border-radius: 10px;
+		font-size: 30px;
+	}
+	#in:focus{
+		all: unset;
+		background-color: #D5B9B2;
+		width: 300px;
+		height: 50px;
+		border: 5px solid #A26769;
+		border-radius: 10px;
+		font-size: 30px;
+		font-weight: bold;
+		font-family: 'Stick No Bills', sans-serif;
+		color: #A26769;
+	}
+	::placeholder{
+		font-family: 'Stick No Bills', sans-serif;
+		font-weight: bold;
+		color: #A26769;
+	}
+</style>
+</html>

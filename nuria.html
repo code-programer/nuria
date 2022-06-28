@@ -1,0 +1,48 @@
+<style>
+	/* Aixó no ho tòquis */
+	@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+	/* Aixó si */
+	html{
+		background-color: coral;
+	}
+	p{
+		color: darkgreen;
+		font-size: 50px;
+		font-family: 'Smooch', cursive;
+	}
+	button:hover{
+		background-color: red;
+		font-family: 'Smooch', cursive;
+	}
+	button{
+		background-color: blueviolet;
+		color: floralwhite;
+		width: 200px;
+		height: 100px;
+		border-radius: 20px;
+		font-family: 'Smooch', cursive;
+	}
+</style>
+<html id="gat">
+<title>Pr0v4</title>
+<link href="https://los40es00.epimg.net/los40/imagenes/2020/02/04/cinetv/1580834241_572538_1580834379_noticia_normal.jpg" rel="icon" type="img/png">
+<p>Hola</p>
+<button onclick="alert('Bon dia'), pepalacerda()">Clica aquí</button>
+<button onclick="change('<p>Ho sento, thas equivocat</p><style>html{background-color: red; }</style>')">Clica aquí</button>
+<img src="https://cf.ltkcdn.net/gatos/images/std/236641-800x515r1-etapas-desarrollo-gatitos.jpg">
+<a href="https://google.com">Google</a>
+<script> 
+	function pepalacerda() {
+	document.getElementById("gat").style = "background-color: red;"
+	document.getElementById("gat").innerHTML = document.getElementById("gat").innerHTML + '<img src="https://www.enelradar.com/__export/1642714080818/sites/elimparcial/img/2022/01/20/whatsapp_image_2022-01-20_at_2_24_39_pm_1.jpg_1359985831.jpg">'
+}
+	function ff() {
+		var x = window.open("file:///Users/nens/Downloads/nuria.html")
+		return x;
+	}
+	function change(html) {
+			document.getElementById("gat").innerHTML = html;
+
+	}
+</script>
+</html>

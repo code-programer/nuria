@@ -1,0 +1,83 @@
+<html> 
+<body id="pets">
+<style>
+		@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;800&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+	html{
+		background-color: ghostwhite;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
+	}
+	h1{
+		font-family: 'Stick No Bills', sans-serif;
+		font-weight: bold;
+		color: #A26769;
+	}
+	p{
+		font-family: 'Stick No Bills', sans-serif;
+		font-size: 30px;
+		color: #A26769;
+	}
+	button{
+		all: unset;
+		color: #A26769;
+		font-family: 'Indie Flower', cursive;
+		align-self: center;
+		width: 200;
+		height: 50;
+		background-color: #D5B9B2;
+		font-size: 45px;
+		border-radius: 10px;
+	}
+	button:active{
+		border: 5px solid #A26769;
+	}
+</style>
+<h1>Quina mascota ets?</h1>
+<p>Respon les preguntes d'aquest qüestionàri per saber amb quina mascota t'identifiques més.</p>
+<img src="perru.png" alt="Perru!">
+<br>
+<button onclick="dod()">Començar</button>
+<br>
+<img src="https://www.pngplay.com/wp-content/uploads/12/Dog-Background-PNG-Clip-Art.png" alt="Foto!">
+<br>
+<img src="https://www.pngkit.com/png/full/231-2316146_imagenes-de-gatos-png-transparent-cute-cat-png.png" alt="Gat!">
+<br>
+<img src="https://cdn.pixabay.com/photo/2016/03/02/13/59/bird-1232416_960_720.png" alt="Birdy!">
+<br>
+<img src="https://www.pngkey.com/png/full/552-5528654_fish-peces-con-fondo-transparente.png" alt="Fish!">
+<br>
+</body>
+	<script type="text/javascript">
+		var one = 0;
+		var doe = 0;
+		var tre = 0;
+		var qua = 0;
+		function dod(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>Soc més...</h1><input id='1' onclick='one++, next()' type='checkbox'>Lleial</input><br><input onclick='doe++, next()' id='2' type='checkbox'>Independent</input><br><input id='3' onclick='tre++, next()' type='checkbox'>Tranquil i feliç</input><br><input id='4' onclick='qua++, next()' type='checkbox'>Solitari</input><br>")
+		}
+		function change(html){
+			document.getElementById("pets").innerHTML = html;
+		}
+		function next(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite;font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>M'agrada</h1><input id='1' onclick='one++, nexta()' type='checkbox'>Jugar</input><br><input onclick='doe++, nexta()' id='2' type='checkbox'>Descansar</input><br><input id='3' onclick='tre++, nexta()' type='checkbox'>Cantar</input><br><input id='4' onclick='qua++, nexta()' type='checkbox'>Menjar</input><br>")
+		}
+		function nexta(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>Em falta</h1><input id='1' onclick='one++, nextb()' type='checkbox'>Egoísme</input><br><input onclick='doe++, nextb()' id='2' type='checkbox'>Amabilitat</input><br><input id='3' onclick='tre++, nextb()' type='checkbox'>Parlar</input><br><input id='4' onclick='qua++, nextb()' type='checkbox'>Memòria</input><br>")
+		}
+		function nextb(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>Escull un menjar</h1><input id='1' onclick='one++, nextc()' type='checkbox'>Carn</input><br><input onclick='doe++, nextc()' id='2' type='checkbox'>Peix</input><br><input id='3' onclick='tre++, nextc()' type='checkbox'>Insectes</input><br><input id='4' onclick='qua++, nextc()' type='checkbox'>Algues</input><br>")
+		}
+		function nextc(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>On aniries de viatge?</h1><input id='1' onclick='one++, nextd()' type='checkbox'>Camp</input><br><input onclick='doe++, nextd()' id='2' type='checkbox'> Casa</input><br><input id='3' onclick='tre++, nextd()' type='checkbox'>Selva</input><br><input id='4' onclick='qua++, nextd()' type='checkbox'>Mar</input><br>")
+		}
+		function nextd(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>Quin superpoder prefereixes?</h1><input id='1' onclick='one++, nexte()' type='checkbox'>Supervelocitat</input><br><input onclick='doe++, nexte()' id='2' type='checkbox'> Saltar fins a 20 metres</input><br><input id='3' onclick='tre++, nexte()' type='checkbox'>Volar</input><br><input id='4' onclick='qua++, nexte()' type='checkbox'>Nadar a la velocitat de la llum</input><br>")
+		}
+		function nexte(){
+			change("<style>html{background-color: #D5B9B2;display: flex;align-items: left;flex-direction: column;text-align: left; color:ghostwhite; font-family: 'Indie Flower', cursive;font-size: 40px;}</style><h1>Quina pel·lícula t'agrada més?</h1><input id='1' onclick='one++, nextf()' type='checkbox'>101 Dalmates</input><br><input onclick='doe++, nextf()' id='2' type='checkbox'> Els Aristogats</input><br><input id='3' onclick='tre++, nextf()' type='checkbox'>Angry Birds</input><br><input id='4' onclick='qua++, nextf()' type='checkbox'>Buscant a Nemo</input><br>")
+		}
+	</script>
+</html>

@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title>L'eina del Roger - Feta amb HTML, JS i CSS</title>
+	</head>
+	<body>
+		<h1>L'eina del Roger - Feta amb HTML, JS i CSS</h1>
+		<input id="search" placeholder="Busca"></input>
+		<button onclick="search()">Ves-hi</button>
+		<div id="result"></div>
+	</body>
+	<script type="text/javascript">
+				//other functions
+		function addElement(link,text) {
+  			var newDiv = document.createElement("div");
+  			var newContent = document.createElement("a");
+  			newContent.setAttribute("href", link)
+  			newContent.innerHTML = text;
+  			newDiv.appendChild(newContent);
+  			var currentDiv = document.getElementById("result");
+  			document.body.insertBefore(newDiv, currentDiv);
+}
+		//database
+		var data = [{"enlla":"https://google.com","text":"Google","ex":"google"},'']
+		//function
+		function search() {
+			var a = document.getElementById("search").value;
+			for (t in data){
+				var d = data[t]
+				var p = JSON.parse(d);
+				console.log(d.ex)
+				console.log(d.enlla)
+				if (d.ex == a) {
+					var r = "<a href='" + d.enlla + "'>" + d.text + "</a>"
+				}
+			}
+		}
+	</script>
+</html>
