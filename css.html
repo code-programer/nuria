@@ -3,4 +3,17 @@
     <title>CSSgame - HTML - Roger Padrell</title>
   </head>
   <style id="style"></style>
+  <div id="screen"></div>
+  <textarea id="editor">
+    #screen{
+    
+    }
+  </textarea>
+  <button id="buttontras" onclick="dod()">Fes-ho!</button>
+  <script>
+    function dod(){
+      var v = document.getElementById("editor").value;
+      document.getElementById("style").innerHTML = v;
+    }
+  </script>
 </html>
