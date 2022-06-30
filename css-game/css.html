@@ -3,17 +3,74 @@
     <title>CSSgame - HTML - Roger Padrell</title>
   </head>
   <style id="style"></style>
-  <div id="screen"></div>
+  <body id="b">
+  <div style="height:400px;  width:700px; border:5px solid cyan; border-radius: 25px;" id="screen"></div>
+  <br>
   <textarea id="editor">
     #screen{
     
     }
   </textarea>
+  <br>
   <button id="buttontras" onclick="dod()">Fes-ho!</button>
+  </body>
   <script>
     function dod(){
       var v = document.getElementById("editor").value;
       document.getElementById("style").innerHTML = v;
     }
   </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;800&display=swap');
+    #buttontras{
+      background-color: lightcoral;
+      border-radius: 25px;
+      border: 5px solid lightcoral;
+      width: 700px;
+      height: 50px;
+      font-size: 25px;
+      font-family: 'Stick No Bills', sans-serif;
+    }
+    #buttontras:hover{
+      background-color: lightgoldenrodyellow;
+      border-radius: 25px;
+      border: 5px solid lightgoldenrodyellow;
+    }
+    #buttontras:active{
+      background-color: lightcyan;
+      border-radius: 25px;
+      border: 5px solid lightcyan;
+    }
+    body{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      text-align: left;
+    }
+    textarea{
+      all: unset;
+      border: 5px solid green;
+      border-radius: 25px;
+      width: 500px;
+      height: 200px;
+      font-family: 'Stick No Bills', sans-serif;
+    }
+    /*scrollbar*/
+    ::-webkit-scrollbar {
+      width: 10px;
+      border-radius: 25px;
+      height: 140px;
+    }
+    ::-webkit-scrollbar-track {
+      background: white;
+      border-radius: 25px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 25px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
 </html>
